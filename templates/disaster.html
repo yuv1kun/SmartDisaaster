@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disaster Prediction</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Disaster Impact Prediction System</h1>
+        </div>
+        <form action="/result" method="post">
+            <div class="form-group">
+                <label for="options1">Alert Level:</label>
+                <select name="options1" id="options1">
+                    <option value="0">Red</option>
+                    <option value="1">Orange</option>
+                    <option value="2">Yellow</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="windspeed">Wind Speed (km/h):</label>
+                <input type="number" name="windspeed" id="windspeed" required>
+            </div>
+            <div class="form-group">
+                <label for="rainfall">Rainfall (mm):</label>
+                <input type="number" name="rainfall" id="rainfall" required>
+            </div>
+            <div class="form-group">
+                <label for="sea">Sea Level (m):</label>
+                <input type="number" name="sea" id="sea" required>
+            </div>
+            <div class="form-group">
+                <label for="options2">Is River Nearby?</label>
+                <select name="options2" id="options2">
+                    <option value="0">Yes</option>
+                    <option value="1">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="options3">Development Level:</label>
+                <select name="options3" id="options3">
+                    <option value="0">Fully Developed</option>
+                    <option value="1">Semi Developed</option>
+                    <option value="2">Under Developed</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="options4">Disaster Type:</label>
+                <select name="options4" id="options4">
+                    <option value="0">Cyclone</option>
+                    <option value="1">Flood</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">Predict Impact</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
